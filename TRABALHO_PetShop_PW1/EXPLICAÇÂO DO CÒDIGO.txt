@@ -1,0 +1,274 @@
+EXPLICAÇÂO DO CÒDIGO:
+Índice
+1. Estrutura Básica do HTML
+2. Cabeçalho e Recursos Externos
+3. Barra de Navegação
+4. Carousel
+5. Seção de Cards de Produtos
+6. Rodapé
+7. Scripts
+
+Cabeçalho e Recursos Externos:
+Explicação:
+
+<meta charset="UTF-8">: A decodificação UTF-8 torna suportavel caracteres especiais e ascentos
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Configura a visualização responsiva para dispositivos móveis.
+width=device-width: Ajusta a largura da página à largura do dispositivo.
+initial-scale=1.0: Define o nível de zoom inicial.
+<title>PetShop</title>: Define o título da página que aparece na aba do navegador.
+<link rel="stylesheet" href="css/bootstrap.css">: Importa o framework Bootstrap 4 para estilização.
+<link rel="stylesheet" href="geral.css">: Importa estilos personalizados do site.
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">: Importa a biblioteca Font Awesome para ícones.
+
+NavBar:
+Explicação Detalhada:
+
+Estrutura da Navbar:
+
+<nav class="navbar navbar-expand-lg navbar-dark gradient-navbar sticky-top shadow">:
+navbar: Classe base do Bootstrap para barras de navegação.
+navbar-expand-lg: Expande a navbar para telas grandes, e colapsa para telas menores
+navbar-dark: Define o esquema de cores para texto claro sobre fundo escuro.
+gradient-navbar: Classe personalizada (definida em geral.css) para aplicar um gradiente.
+sticky-top: Mantém a navbar fixada no topo durante a rolagem.
+shadow: Adiciona uma sombra sutil para efeito de elevação.
+Container:
+
+<div class="container">: A classe container centraliza o conteudo dentro da navbar com laterais responsivas
+Logo:
+
+<a class="navbar-brand" href="home.html">: Link para a página inicial com classe(navbar-brand) para estilização do logo.
+<img src="imgs/logo.jpg" width="90" height="90" class="d-inline-block align-top my-2" alt="Logo PetShop">:
+d-inline-block: Exibe a imagem como bloco inline.
+align-top: Alinha a imagem ao topo do contêiner.
+my-2: Adiciona uma margem vertical (top-bottom) de tamanho 2 equivalente a 0.5 rem
+Botão de Toggle (Hambúrguer):
+
+Aparece apenas em telas pequenas quando a navbar colapsa("collapse").
+data-toggle="collapse" e data-target="#navbarNavDropdown": Esses dois controlam quais elementos vão se expandir ou diminuir/colapsar
+aria-controls, aria-expanded, aria-label: Atributos de acessibilidade.
+Conteúdo Colapsável:
+
+<div class="collapse navbar-collapse" id="navbarNavDropdown">: Conteiner que contem os itens que seram colapsados
+Menu de Navegação:
+
+<ul class="navbar-nav mx-auto">: Lista não ordenada para os links de navegação.
+mx-auto: Parceito do my, definindo a posição na horizontal.
+Cada item do menu é um <li class="nav-item active"> contendo um link <a class="nav-link">.
+active: Da destaque ao item.
+Formulário de Pesquisa:
+
+<form class="form-inline d-flex justify-content-center my-2 my-lg-0">: Formulário alinhado horizontalmente.
+d-flex justify-content-center: Utiliza flexbox pra centralizar os elementos.
+<input class="form-control mr-sm-2">: É o campo de digitação com margens na direita.
+<button class="btn btn-warning">: Botão amarelo pra enviar pesquisa.
+
+Carrousel:
+Explicação Detalhada:
+
+Estrutura Principal do Carousel:
+
+<div id="carouselindicadores" class="carousel slide" data-ride="carousel">:
+id="carouselindicadores": Identificador único para referenciar este carousel.
+carousel slide: Classes do Bootstrap para criar um carousel com transições de slide.
+data-ride="carousel": Inicia o carousel automaticamente quando a página carrega.
+Indicadores do Carousel:
+
+<ol class="carousel-indicators">: Lista ordenada para os indicadores (pontos) do carousel.
+Cada <li> representa um indicador para um slide:
+data-target="#carouselindicadores": Aponta para o ID do carousel.
+data-slide-to="0": Indica qual slide este indicador controla (0-indexed).
+class="active": Apenas no primeiro indicador, marca-o como ativo inicialmente.
+Conteúdo do Carousel:
+
+<div class="carousel-inner">: Contêiner para todos os slides.
+Estrutura de Cada Slide:
+
+<div class="carousel-item active">: O primeiro slide tem active para ser exibido inicialmente.
+Container de imagem com altura fixa:
+height: 400px: Define altura fixa para todos os slides.
+overflow: hidden: Esconde qualquer parte da imagem que ultrapasse o contêiner.
+d-block w-100: Exibe a imagem como bloco com 100% da largura.
+object-fit: cover: Mantém a proporção da imagem enquanto preenche o espaço disponível.
+Legenda do slide:
+carousel-caption: Posiciona a legenda sobre a imagem.
+d-block: Garante que a legenda seja exibida como bloco.
+bg-dark rounded: Fundo escuro com cantos arredondados para melhor legibilidade.
+p-2 p-md-3: Padding responsivo (menor em dispositivos pequenos, maior em médios e grandes).
+d-none d-sm-block: Esconde o parágrafo em dispositivos muito pequenos (< 576px).
+Controles de Navegação:
+
+Botões de anterior e próximo:
+carousel-control-prev/next: Posiciona e estiliza os botões.
+href="#carouselindicadores": Aponta para o ID do carousel.
+data-slide="prev/next": Define a ação do botão.
+sr-only: Texto visível apenas para leitores de tela (acessibilidade).
+Seção de Cards de Produtos:
+Explicação Detalhada:
+
+Container Principal:
+
+<div class="container mt-5 mb-5">:
+container: Centraliza o conteúdo com margens laterais responsivas.
+mt-5 mb-5: Adiciona margens superior e inferior grandes (3rem cada).
+Título da Seção:
+
+<div class="text-center mb-5">: Centraliza o texto com margem inferior.
+<h2 class="font-weight-bold">: Título em negrito.
+<hr class="mx-auto" style="width: 80px; border-top: 3px solid #ffc107;">:
+Linha decorativa centralizada (mx-auto) com largura fixa e cor amarela.
+Este elemento cria uma separação visual e adiciona um toque de estilo.
+Grid de Cards:
+
+<div class="row">: Inicia o sistema de grid do Bootstrap.
+Cada card está em uma coluna com classes responsivas:
+col-12: Ocupa 100% da largura em dispositivos muito pequenos (< 576px).
+col-sm-6: Ocupa 50% da largura em dispositivos pequenos (≥ 576px).
+col-lg-3: Ocupa 25% da largura em dispositivos grandes (≥ 992px).
+mb-4: Adiciona margem inferior entre os cards.
+Estrutura de Cada Card:
+
+<div class="card h-100 border-0 shadow">:
+card: Classe base do Bootstrap para cards.
+h-100: Força todos os cards a terem a mesma altura.
+border-0: Remove a borda padrão do card.
+shadow: Adiciona sombra para efeito de elevação.
+Badge (Etiqueta):
+
+<span class="badge badge-success position-absolute" style="top: 10px; right: 10px; z-index: 1;">:
+badge badge-success: Estilo de etiqueta verde do Bootstrap.
+position-absolute: Posiciona a etiqueta de forma absoluta dentro do contêiner relativo.
+Atributos de estilo inline definem a posição exata (canto superior direito).
+z-index: 1: Garante que a etiqueta fique acima da imagem.
+Container da Imagem:
+
+<div style="height: 200px; overflow: hidden;">:
+Altura fixa para todas as imagens, garantindo consistência visual.
+overflow: hidden: Corta qualquer parte da imagem que ultrapasse o contêiner.
+<img class="card-img-top h-100" style="object-fit: cover;">:
+card-img-top: Estilização padrão do Bootstrap para imagens no topo de cards.
+h-100: Força a imagem a ocupar 100% da altura do contêiner.
+object-fit: cover: Mantém a proporção da imagem enquanto preenche o espaço.
+Corpo do Card:
+
+<div class="card-body">: Contêiner para o conteúdo principal do card.
+Sistema de Avaliação:
+
+<div class="text-warning mb-2">: Contêiner para as estrelas com cor amarela.
+Ícones de estrela do Font Awesome:
+<i class="fas fa-star"></i>: Estrela cheia.
+<i class="fas fa-star-half-alt"></i>: Meia estrela.
+<i class="far fa-star"></i>: Estrela vazia (usado no card 2).
+<small class="text-muted ml-1">(4.5)</small>: Valor numérico da avaliação em texto menor e cinza.
+Informações do Produto:
+
+<h5 class="card-title font-weight-bold">: Título do produto em negrito.
+<p class="card-text">: Descrição do produto.
+<p class="card-text text-primary font-weight-bold h5">: Preço em azul, negrito e tamanho maior.
+Rodapé do Card:
+
+<div class="card-footer bg-white border-top-0 text-center">:
+bg-white: Fundo branco (em vez do cinza padrão).
+border-top-0: Remove a borda superior que normalmente separa o rodapé.
+<a href="produtos.html" class="btn btn-warning btn-block text-white font-weight-bold">:
+btn-warning: Botão amarelo.
+btn-block: Botão ocupa 100% da largura disponível.
+text-white: Texto branco para melhor contraste.
+<i class="fas fa-shopping-cart mr-2"></i>: Ícone de carrinho com margem à direita.
+Rodapé:
+Explicação Detalhada:
+
+Estrutura Principal do Rodapé:
+
+<footer class="bg-dark text-white mt-5 py-4">:
+bg-dark: Fundo escuro.
+text-white: Texto branco para contraste.
+mt-5: Margem superior grande para separar do conteúdo anterior.
+py-4: Padding vertical para espaçamento interno.
+Container e Grid:
+
+<div class="container">: Centraliza o conteúdo com margens laterais responsivas.
+<div class="row">: Inicia o sistema de grid do Bootstrap.
+Primeira Coluna - Informações da Empresa:
+
+<div class="col-md-4 mb-3 mb-md-0">:
+Ocupa 1/3 da largura em dispositivos médios e grandes.
+mb-3 mb-md-0: Margem inferior em dispositivos pequenos, sem margem em médios e grandes.
+<h5>PetShop</h5>: Título da seção.
+<p class="text-muted">: Texto em cinza claro.
+Segunda Coluna - Links Rápidos:
+
+<div class="col-md-4 mb-3 mb-md-0">: Mesma estrutura de grid da primeira coluna.
+<ul class="list-unstyled">: Lista sem marcadores.
+Links com classe text-white para manter o texto branco (links são azuis por padrão).
+Terceira Coluna - Redes Sociais:
+
+<div class="col-md-4">: Última coluna do grid.
+Ícones de redes sociais como imagens com dimensões fixas.
+Copyright:
+
+<div class="row mt-3">: Nova linha com margem superior.
+<div class="col-12 text-center">: Ocupa toda a largura e centraliza o texto.
+<p class="mb-0">: Parágrafo sem margem inferior.
+&copy;: Entidade HTML para o símbolo de copyright (©).
+
+Scripts:
+Explicação:
+
+<script src="jquery-3.7.1.min.js"></script>: Carrega a biblioteca jQuery, necessária para funcionalidades interativas do Bootstrap.
+<script src="js/bootstrap.js"></script>: Carrega o JavaScript do Bootstrap para componentes interativos como o carousel, navbar colapsável, etc.
+Os scripts são colocados no final do <body> para melhorar o desempenho de carregamento da página.
+Comportamento Responsivo
+Este site foi construído com responsividade em mente, adaptando-se a diferentes tamanhos de tela:
+
+Dispositivos Muito Pequenos (< 576px):
+
+Navbar colapsa para um botão de hambúrguer.
+Cards ocupam 100% da largura (um por linha).
+Descrições menores são ocultadas no carousel (d-none d-sm-block).
+Colunas do rodapé empilham-se verticalmente.
+Dispositivos Pequenos (≥ 576px):
+
+Cards ocupam 50% da largura (dois por linha).
+Descrições aparecem no carousel.
+Dispositivos Médios (≥ 768px):
+
+Padding maior em alguns elementos (p-md-3).
+Colunas do rodapé começam a se alinhar horizontalmente.
+Dispositivos Grandes (≥ 992px):
+
+Navbar expande horizontalmente.
+Cards ocupam 25% da largura (quatro por linha).
+Dispositivos Extra Grandes (≥ 1200px):
+
+Layout permanece similar ao de dispositivos grandes, mas com mais espaço.
+Técnicas de Design Utilizadas
+Consistência Visual:
+
+Esquema de cores consistente (amarelo para botões, azul para preços).
+Altura fixa para imagens nos cards e carousel.
+Espaçamento uniforme entre elementos.
+Hierarquia Visual:
+
+Títulos em negrito e tamanho maior.
+Badges coloridas para destacar informações importantes.
+Preços em azul e tamanho maior para chamar atenção.
+Feedback Visual:
+
+Botões com cores contrastantes.
+Sistema de avaliação com estrelas para indicar qualidade.
+Acessibilidade:
+
+Textos alternativos para imagens.
+Textos para leitores de tela (sr-only).
+Contraste adequado entre texto e fundo.
+Performance:
+
+Scripts carregados no final do documento.
+Imagens com dimensões controladas.
+
+
+
+
+
+

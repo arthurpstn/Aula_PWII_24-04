@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark gradient-navbar sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img src="imgs/logo.jpg" width="90" height="90" class="d-inline-block align-top my-2" alt="Logo PetShop">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contatos.html">Contato</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="produtos.html">Produtos</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                        <div class="input-group-append">
+                            <button class="btn btn-warning" type="submit">Pesquisar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>    
+    <div id="carouselindicadores" class="carousel slide" data-ride="carousel">
+        <!-- Indicadores do carousel -->
+        <ol class="carousel-indicators">
+            <li data-target="#carouselindicadores" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselindicadores" data-slide-to="1"></li>
+            <li data-target="#carouselindicadores" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Conteúdo do carousel -->
+        <div class="carousel-inner">
+            <!-- Primeiro slide -->
+            <div class="carousel-item active">
+                <div style="height: 400px; overflow: hidden;">
+                    <img src="imgs/racao.jpg" class="d-block w-100" style="object-fit: cover; height: 100%;"
+                        alt="Ração">
+                </div>
+                <div class="carousel-caption d-block bg-dark rounded p-2 p-md-3">
+                    <h5 class="font-weight-bold text-white">Ração</h5>
+                    <p class="d-none d-sm-block">Ração para cães e gatos</p>
+                    <a href="#secao" class="btn btn-warning btn-sm">Ver mais</a>
+                </div>
+            </div>
+
+            <!-- Segundo slide -->
+            <div class="carousel-item">
+                <div style="height: 400px; overflow: hidden;">
+                    <img src="imgs/brinquedos.png" class="d-block w-100" style="object-fit: cover; height: 100%;"
+                        alt="Brinquedos">
+                </div>
+                <div class="carousel-caption d-block bg-dark rounded p-2 p-md-3">
+                    <h5 class="font-weight-bold text-white">Brinquedos</h5>
+                    <p class="d-none d-sm-block">Brinquedos divertidos para seu pet</p>
+                    <a href="#secao" class="btn btn-warning btn-sm">Ver mais</a>
+                </div>
+            </div>
+
+            <!-- Terceiro slide -->
+            <div class="carousel-item">
+                <div style="height: 400px; overflow: hidden;">
+                    <img src="imgs/acessorios.jpg" class="d-block w-100" style="object-fit: cover; height: 100%;"
+                        alt="Acessórios">
+                </div>
+                <div class="carousel-caption d-block bg-dark rounded p-2 p-md-3">
+                    <h5 class="font-weight-bold text-white">Acessórios</h5>
+                    <p class="d-none d-sm-block">Coleiras, guias e muito mais</p>
+                    <a href="#secao" class="btn btn-warning btn-sm">Ver mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles de navegação -->
+        <a class="carousel-control-prev" href="#carouselindicadores" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselindicadores" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+
+    <div id="secao" class="container mt-5 mb-5">
+        <div class="text-center mb-5">
+            <h2 class="font-weight-bold">Nossos Produtos e Serviços em Destaque</h2>
+            <hr class="mx-auto" style="width: 80px; border-top: 3px solid #ffc107;">
+        </div>
+    
+        <div class="row">
+            <!-- Card 1 - Petisco 1 -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="position-relative">
+                        <span class="badge badge-success position-absolute" style="top: 10px; right: 10px; z-index: 1;">
+                            Mais Vendido
+                        </span>
+                        <div style="height: 200px; overflow: hidden;">
+                            <img src="imgs/petisco1.jpg" class="card-img-top h-100" style="object-fit: cover;"
+                                alt="Ração Premium">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <small class="text-muted ml-1">(4.5)</small>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Doguitos</h5>
+                        <p class="card-text">Bifinho de alta qualidade para seu pet, com todos os nutrientes
+                            necessários.</p>
+                        <p class="card-text text-primary font-weight-bold h5">R$ 19,90</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center">
+                        <a href="produtos.html" class="btn btn-warning btn-block text-white font-weight-bold">
+                            <i class="fas fa-shopping-cart mr-2"></i>Comprar
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 2 - Petisco 2 -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="position-relative">
+                        <span class="badge badge-danger position-absolute" style="top: 10px; right: 10px; z-index: 1;">
+                            Novo
+                        </span>
+                        <div style="height: 200px; overflow: hidden;">
+                            <img src="imgs/petisco2.jpg" class="card-img-top h-100" style="object-fit: cover;"
+                                alt="Brinquedo Interativo">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <small class="text-muted ml-1">(4.0)</small>
+                        </div>
+                        <h5 class="card-title font-weight-bold">PetTreats: Beef Sticks</h5>
+                        <p class="card-text">Mantenha seu pet bem-humorado e saudável com estes deliciosos bifinhos de
+                            carne.</p>
+                        <p class="card-text text-primary font-weight-bold h5">R$ 25,90</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center">
+                        <a href="produtos.html" class="btn btn-warning btn-block text-white font-weight-bold">
+                            <i class="fas fa-shopping-cart mr-2"></i>Comprar
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 Petisco 3 -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div style="height: 200px; overflow: hidden;">
+                        <img src="imgs/petisco3.jpg" class="card-img-top h-100" style="object-fit: cover;"
+                            alt="Banho e Tosa">
+                    </div>
+                    <div class="card-body">
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <small class="text-muted ml-1">(5.0)</small>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Golden Cookie</h5>
+                        <p class="card-text">Biscoitinhos deliciosos para seu amiguinho.</p>
+                        <p class="card-text text-primary font-weight-bold h5">A partir de R$ 15,00</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center">
+                        <a href="produtos.html" class="btn btn-warning btn-block text-white font-weight-bold">
+                            <i class="fas fa-shopping-cart mr-2"></i>Comprar
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 4 Consulta Veterinária -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="position-relative">
+                        <span class="badge badge-info position-absolute" style="top: 10px; right: 10px; z-index: 1;">
+                            Recomendado
+                        </span>
+                        <div style="height: 200px; overflow: hidden;">
+                            <img src="imgs/consulta.jpeg" class="card-img-top h-100" style="object-fit: cover;"
+                                alt="Consulta Veterinária">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <small class="text-muted ml-1">(4.7)</small>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Consulta Veterinária</h5>
+                        <p class="card-text">Atendimento veterinário especializado para cuidar da saúde do seu pet.</p>
+                        <p class="card-text text-primary font-weight-bold h5">R$ 120,00</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center">
+                        <a href="contatos.html" class="btn btn-warning btn-block text-white font-weight-bold">
+                            <i class="far fa-calendar-alt mr-2"></i>Agendar
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 - Hospedagem Pet -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="position-relative">
+                        <span class="badge badge-primary position-absolute" style="top: 10px; right: 10px; z-index: 1;">
+                            Popular
+                        </span>
+                        <div style="height: 200px; overflow: hidden;">
+                            <img src="imgs/hospedagem.jpg" class="card-img-top h-100" style="object-fit: cover;"
+                                alt="Hospedagem Pet">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <small class="text-muted ml-1">(4.9)</small>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Hospedagem Pet</h5>
+                        <p class="card-text">Acomodações confortáveis para seu pet durante suas viagens ou ausências.</p>
+                        <p class="card-text text-primary font-weight-bold h5">A partir de R$ 80,00/dia</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center">
+                        <a href="contatos.html" class="btn btn-warning btn-block text-white font-weight-bold">
+                            <i class="far fa-calendar-alt mr-2"></i>Reservar
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 - Banho e Tosa -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="position-relative">
+                        <span class="badge badge-success position-absolute" style="top: 10px; right: 10px; z-index: 1;">
+                            Mais Procurado
+                        </span>
+                        <div style="height: 200px; overflow: hidden;">
+                            <img src="imgs/banho-e-tosa.jpg" class="card-img-top h-100" style="object-fit: cover;"
+                                alt="Banho e Tosa">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <small class="text-muted ml-1">(4.6)</small>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Banho e Tosa</h5>
+                        <p class="card-text">Serviço completo de higiene e estética para deixar seu pet limpo e cheiroso.</p>
+                        <p class="card-text text-primary font-weight-bold h5">A partir de R$ 60,00</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center">
+                        <a href="contatos.html" class="btn btn-warning btn-block text-white font-weight-bold">
+                            <i class="far fa-calendar-alt mr-2"></i>Agendar
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7 - Cama para Pet -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="position-relative">
+                        <span class="badge badge-danger position-absolute" style="top: 10px; right: 10px; z-index: 1;">
+                            Novo
+                        </span>
+                        <div style="height: 200px; overflow: hidden;">
+                            <img src="imgs/cama-pet.jpg" class="card-img-top h-100" style="object-fit: cover;"
+                                alt="Cama para Pet">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <small class="text-muted ml-1">(5.0)</small>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Cama Premium</h5>
+                        <p class="card-text">Cama confortável e durável para seu pet descansar com o máximo de conforto.</p>
+                        <p class="card-text text-primary font-weight-bold h5">R$ 149,90</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center">
+                        <a href="produtos.html" class="btn btn-warning btn-block text-white font-weight-bold">
+                            <i class="fas fa-shopping-cart mr-2"></i>Comprar
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 8 - Brinquedos Interativos -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="position-relative">
+                        <span class="badge badge-info position-absolute" style="top: 10px; right: 10px; z-index: 1;">
+                            Recomendado
+                        </span>
+                        <div style="height: 200px; overflow: hidden;">
+                            <img src="imgs/brinquedos-pet.jpg" class="card-img-top h-100" style="object-fit: cover;"
+                                alt="Brinquedos Interativos">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <small class="text-muted ml-1">(4.2)</small>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Brinquedos Interativos</h5>
+                        <p class="card-text">Kit com brinquedos que estimulam a inteligência e atividade física do seu pet.</p>
+                        <p class="card-text text-primary font-weight-bold h5">R$ 89,90</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center">
+                        <a href="produtos.html" class="btn btn-warning btn-block text-white font-weight-bold">
+                            <i class="fas fa-shopping-cart mr-2"></i>Comprar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <footer class="bg-dark text-white mt-5 py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <h5>PetShop</h5>
+                        <p class="text-warning">O MELHOR PARA O SEU PÉT!</p>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <h5>Navegar</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="home.html" class="text-muted">Home</a></li>
+                        <li><a href="produtos.html" class="text-primary">Produtos</a></li>
+                        <li><a href="contatos.html" class="text-muted">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Redes Sociais</h5>
+                        <ul class="list-unstyled">
+                            <li class="text-white"><img src="imgs/face.jpeg" width="30" height="30">: PetShop</li>
+                            <li class="text-white"><img src="imgs/insta.png" width="30" height="30"> : PetShop</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">&copy; 2025 PetShop. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
